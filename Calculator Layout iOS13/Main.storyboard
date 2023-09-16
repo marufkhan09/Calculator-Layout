@@ -16,16 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XTB-rx-hVJ">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XTB-rx-hVJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
-                                        <rect key="frame" x="352.5" y="0.0" width="61.5" height="148.5"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4el-16-57M">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="148.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 0  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="148.5"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="gC2-i9-XzD" secondAttribute="bottom" id="dID-hv-s4G"/>
+                                            <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="kn3-1h-Tsa"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="top" secondItem="4el-16-57M" secondAttribute="top" id="oQ7-04-Fkx"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="4el-16-57M" secondAttribute="leading" constant="20" id="yEH-5e-YbW"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-sW-kSF" userLabel="First">
                                         <rect key="frame" x="0.0" y="149.5" width="414" height="148.5"/>
                                         <subviews>
@@ -62,14 +73,6 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="G64-9b-ycy" firstAttribute="height" secondItem="ghE-zu-oK9" secondAttribute="height" id="HV3-xO-fhN"/>
-                                            <constraint firstItem="G64-9b-ycy" firstAttribute="width" secondItem="ghE-zu-oK9" secondAttribute="width" id="Nmv-rJ-Dw8"/>
-                                            <constraint firstItem="4Xg-es-CLv" firstAttribute="width" secondItem="ghE-zu-oK9" secondAttribute="width" id="fi3-rs-zhg"/>
-                                            <constraint firstItem="ros-cP-dSM" firstAttribute="height" secondItem="ghE-zu-oK9" secondAttribute="height" id="i9Q-1I-WUw"/>
-                                            <constraint firstItem="4Xg-es-CLv" firstAttribute="height" secondItem="ghE-zu-oK9" secondAttribute="height" id="uQ9-EP-yV6"/>
-                                            <constraint firstItem="ros-cP-dSM" firstAttribute="width" secondItem="ghE-zu-oK9" secondAttribute="width" id="vA8-st-EKU"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="aTq-4m-Qkf">
                                         <rect key="frame" x="0.0" y="299" width="414" height="148.5"/>
@@ -107,17 +110,6 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="0Te-1e-CoT" firstAttribute="leading" secondItem="aTq-4m-Qkf" secondAttribute="leading" id="ByU-Rb-oDD"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Te-1e-CoT" secondAttribute="bottom" id="P93-F8-ngV"/>
-                                            <constraint firstItem="a4f-FD-ABr" firstAttribute="height" secondItem="0Te-1e-CoT" secondAttribute="height" id="U4I-65-yG8"/>
-                                            <constraint firstItem="a4f-FD-ABr" firstAttribute="width" secondItem="0Te-1e-CoT" secondAttribute="width" id="Uua-eA-rH5"/>
-                                            <constraint firstItem="0Te-1e-CoT" firstAttribute="top" secondItem="aTq-4m-Qkf" secondAttribute="top" id="WL4-8n-WEy"/>
-                                            <constraint firstItem="DbC-GJ-p5L" firstAttribute="height" secondItem="0Te-1e-CoT" secondAttribute="height" id="fu2-ea-6mc"/>
-                                            <constraint firstItem="O2M-Zh-IbB" firstAttribute="height" secondItem="0Te-1e-CoT" secondAttribute="height" id="gUj-sQ-OBg"/>
-                                            <constraint firstItem="DbC-GJ-p5L" firstAttribute="width" secondItem="0Te-1e-CoT" secondAttribute="width" id="gvr-Al-bhi"/>
-                                            <constraint firstItem="O2M-Zh-IbB" firstAttribute="width" secondItem="0Te-1e-CoT" secondAttribute="width" id="rfy-fu-8ec"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YGa-lZ-Ry9">
                                         <rect key="frame" x="0.0" y="448.5" width="414" height="148.5"/>
@@ -228,35 +220,15 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="vZq-hP-0tj" firstAttribute="leading" secondItem="XTB-rx-hVJ" secondAttribute="leading" id="2Yk-CW-4nV"/>
-                                    <constraint firstItem="xbz-ai-fBu" firstAttribute="top" secondItem="YGa-lZ-Ry9" secondAttribute="bottom" constant="1" id="7Bq-I2-Gxl"/>
-                                    <constraint firstItem="9IP-sW-kSF" firstAttribute="leading" secondItem="XTB-rx-hVJ" secondAttribute="leading" id="Fwb-Gk-Luo"/>
-                                    <constraint firstAttribute="trailing" secondItem="YGa-lZ-Ry9" secondAttribute="trailing" id="HM6-uz-KWD"/>
-                                    <constraint firstItem="YGa-lZ-Ry9" firstAttribute="top" secondItem="aTq-4m-Qkf" secondAttribute="bottom" constant="1" id="Ic9-pb-rBg"/>
-                                    <constraint firstAttribute="trailing" secondItem="9IP-sW-kSF" secondAttribute="trailing" id="MMy-su-drJ"/>
-                                    <constraint firstItem="YGa-lZ-Ry9" firstAttribute="top" secondItem="aTq-4m-Qkf" secondAttribute="bottom" constant="1" id="Pwa-fD-uBv"/>
-                                    <constraint firstAttribute="bottom" secondItem="vZq-hP-0tj" secondAttribute="bottom" id="S6V-c0-grP"/>
-                                    <constraint firstItem="aTq-4m-Qkf" firstAttribute="top" secondItem="9IP-sW-kSF" secondAttribute="bottom" constant="1" id="WqE-O0-yPb"/>
-                                    <constraint firstItem="vZq-hP-0tj" firstAttribute="top" secondItem="xbz-ai-fBu" secondAttribute="bottom" constant="1" id="Yz0-qk-u7O"/>
-                                    <constraint firstAttribute="trailing" secondItem="xbz-ai-fBu" secondAttribute="trailing" id="bb2-lE-f7u"/>
-                                    <constraint firstAttribute="trailing" secondItem="aTq-4m-Qkf" secondAttribute="trailing" id="fOW-G8-FzI"/>
-                                    <constraint firstAttribute="trailing" secondItem="vZq-hP-0tj" secondAttribute="trailing" id="g3b-zW-MLz"/>
-                                    <constraint firstItem="vZq-hP-0tj" firstAttribute="top" secondItem="xbz-ai-fBu" secondAttribute="bottom" constant="1" id="gY3-6B-1IS"/>
-                                    <constraint firstItem="xbz-ai-fBu" firstAttribute="leading" secondItem="XTB-rx-hVJ" secondAttribute="leading" id="lEi-X7-Wcm"/>
-                                    <constraint firstItem="YGa-lZ-Ry9" firstAttribute="leading" secondItem="XTB-rx-hVJ" secondAttribute="leading" id="qXx-Cv-D3Q"/>
-                                    <constraint firstItem="aTq-4m-Qkf" firstAttribute="leading" secondItem="XTB-rx-hVJ" secondAttribute="leading" id="smd-jz-G1U"/>
-                                    <constraint firstItem="xbz-ai-fBu" firstAttribute="top" secondItem="YGa-lZ-Ry9" secondAttribute="bottom" constant="1" id="tio-8w-Hah"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ocv-dr-WMp"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XTB-rx-hVJ" secondAttribute="bottom" id="7x2-iv-XN0"/>
-                            <constraint firstItem="XTB-rx-hVJ" firstAttribute="top" secondItem="cux-nb-tfI" secondAttribute="top" id="i3U-AQ-s41"/>
-                            <constraint firstItem="XTB-rx-hVJ" firstAttribute="leading" secondItem="cux-nb-tfI" secondAttribute="leading" id="mXh-wX-RAm"/>
-                            <constraint firstItem="XTB-rx-hVJ" firstAttribute="trailing" secondItem="cux-nb-tfI" secondAttribute="trailing" id="qKv-oN-fly"/>
+                            <constraint firstItem="XTB-rx-hVJ" firstAttribute="top" secondItem="cux-nb-tfI" secondAttribute="top" id="2qv-HJ-rUI"/>
+                            <constraint firstItem="Ocv-dr-WMp" firstAttribute="trailing" secondItem="XTB-rx-hVJ" secondAttribute="trailing" id="4R8-0C-QkI"/>
+                            <constraint firstAttribute="bottom" secondItem="XTB-rx-hVJ" secondAttribute="bottom" id="IO1-3o-uxg"/>
+                            <constraint firstItem="XTB-rx-hVJ" firstAttribute="leading" secondItem="Ocv-dr-WMp" secondAttribute="leading" id="WXG-24-W6x"/>
                         </constraints>
                     </view>
                 </viewController>
